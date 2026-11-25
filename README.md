@@ -2,14 +2,14 @@
 
 Seis cuadernos de Google Colab, explicados **paso a paso**, para reconocer las copas de *Ochroma pyramidale* (topa) en un ortomosaico tomado con un dron DJI Mavic 3 Multispectral. Cada cuaderno usa un algoritmo distinto:
 
-| Cuaderno | Algoritmo | Con qué aprende | Resultado en el examen (30 %) |
-|---|---|---|---|
-| [1_RF_paso_a_paso](cuadernos/1_RF_paso_a_paso.ipynb) | Random Forest | 35 rasgos de cada copa: bandas, índices de vegetación y textura | Kappa 0,552 |
-| [2_SVM_paso_a_paso](cuadernos/2_SVM_paso_a_paso.ipynb) | Máquina de vectores de soporte | Los mismos rasgos | Kappa 0,654 |
-| [3_XGBoost_paso_a_paso](cuadernos/3_XGBoost_paso_a_paso.ipynb) | XGBoost | Los mismos rasgos | Kappa 0,620 |
-| [4_YOLO_paso_a_paso](cuadernos/4_YOLO_paso_a_paso.ipynb) | YOLO26l-seg | Teselas de 640 píxeles en color natural | mAP50 0,464 |
-| [5_ViT_paso_a_paso](cuadernos/5_ViT_paso_a_paso.ipynb) | Vision Transformer | Recortes de cada copa (224 píxeles) | Kappa 0,951 |
-| [6_UNet_paso_a_paso](cuadernos/6_UNet_paso_a_paso.ipynb) | U-Net | Teselas de 640 píxeles en color natural | IoU 0,666 |
+| Cuaderno | Algoritmo | Con qué aprende | Resultado en el examen (30 %) | Abrir |
+|---|---|---|---|---|
+| [1_RF_paso_a_paso](cuadernos/1_RF_paso_a_paso.ipynb) | Random Forest | 35 rasgos de cada copa: bandas, índices de vegetación y textura | Kappa 0,552 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/elfiel-code/cuadernos-de-machine-learning-y-deep-learning/blob/main/cuadernos/1_RF_paso_a_paso.ipynb) |
+| [2_SVM_paso_a_paso](cuadernos/2_SVM_paso_a_paso.ipynb) | Máquina de vectores de soporte | Los mismos rasgos | Kappa 0,654 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/elfiel-code/cuadernos-de-machine-learning-y-deep-learning/blob/main/cuadernos/2_SVM_paso_a_paso.ipynb) |
+| [3_XGBoost_paso_a_paso](cuadernos/3_XGBoost_paso_a_paso.ipynb) | XGBoost | Los mismos rasgos | Kappa 0,620 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/elfiel-code/cuadernos-de-machine-learning-y-deep-learning/blob/main/cuadernos/3_XGBoost_paso_a_paso.ipynb) |
+| [4_YOLO_paso_a_paso](cuadernos/4_YOLO_paso_a_paso.ipynb) | YOLO26l-seg | Teselas de 640 píxeles en color natural | mAP50 0,464 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/elfiel-code/cuadernos-de-machine-learning-y-deep-learning/blob/main/cuadernos/4_YOLO_paso_a_paso.ipynb) |
+| [5_ViT_paso_a_paso](cuadernos/5_ViT_paso_a_paso.ipynb) | Vision Transformer | Recortes de cada copa (224 píxeles) | Kappa 0,951 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/elfiel-code/cuadernos-de-machine-learning-y-deep-learning/blob/main/cuadernos/5_ViT_paso_a_paso.ipynb) |
+| [6_UNet_paso_a_paso](cuadernos/6_UNet_paso_a_paso.ipynb) | U-Net | Teselas de 640 píxeles en color natural | IoU 0,666 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/elfiel-code/cuadernos-de-machine-learning-y-deep-learning/blob/main/cuadernos/6_UNet_paso_a_paso.ipynb) |
 
 Con una misma referencia de 1419 copas revisadas (250 de topa), los seis modelos tuvieron un Kappa de 0,736 a 0,805, sin diferencias significativas entre ellos (prueba de McNemar).
 
@@ -26,6 +26,8 @@ Cada paso tiene un **Para qué**, un **Qué verás**, la **Fuente** que lo respa
 Los cuadernos guardan las salidas de una corrida real, así que se pueden ver sin correrlos.
 
 ## Cómo usarlos
+
+GitHub muestra los cuadernos sobre fondo blanco. Para verlos con fondo negro, ábrelos con el botón **Abrir en Colab** y, en Colab, elige **Herramientas → Configuración → Sitio → Tema: oscuro**.
 
 1. Copia `topa_pasos.py` (las funciones de todos los pasos) y los cuadernos a una carpeta `PASO_A_PASO` de tu Google Drive.
 2. Abre un cuaderno en Google Colab. Para YOLO, Vision Transformer y U-Net, usa un entorno con GPU.
